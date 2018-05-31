@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Clapper"
-version = "0.1.1"
+version = "0.1.2"
 description = "xml-rpc server for ICStation board ICSE014A"
 authors = ["Grzegorz Zebrowski <grzegorz.zebrowski@thrust.pl>"]
 
