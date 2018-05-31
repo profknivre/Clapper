@@ -1,4 +1,4 @@
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 # ICStation ICSE014A relay board handler
 
 
@@ -78,6 +78,19 @@ class Clapper:
         :return:
         """
         return self.set(0xff)
+
+    def is_on(self, which):
+        if which < 0 or which > 7:
+            raise Exception('Clapper Value out of range {:d}'.format(which))
+
+        bit = (1 << which)
+        return self.value & bit == 0
+
+    def toggle(self, which):
+        if which < 0 or which > 7:
+            raise Exception('Clapper Value out of range {:d}'.format(which))
+
+        return self.is_on(which) and self.off(which) or self.on(which)
 
     # def _dispatch(self, method, params):
     #     pass
