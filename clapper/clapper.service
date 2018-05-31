@@ -1,0 +1,10 @@
+[Unit]
+Description=relay board handler
+BindsTo=dev-serial-by\x2did-usb\x2dProlific_Technology_Inc._USB\x2dSerial_Controller\x2dif00\x2dport0.device
+After=dev-serial-by\x2did-usb\x2dProlific_Technology_Inc._USB\x2dSerial_Controller\x2dif00\x2dport0.device
+
+[Service]
+ExecStart=/usr/bin/python -m clapper
+
+[Install]
+WantedBy=dev-serial-by\x2did-usb\x2dProlific_Technology_Inc._USB\x2dSerial_Controller\x2dif00\x2dport0.device
