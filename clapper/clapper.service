@@ -4,7 +4,10 @@ BindsTo=dev-serial-by\x2did-usb\x2dProlific_Technology_Inc._USB\x2dSerial_Contro
 After=dev-serial-by\x2did-usb\x2dProlific_Technology_Inc._USB\x2dSerial_Controller\x2dif00\x2dport0.device
 
 [Service]
+Environment="PYTHONUNBUFFERED=1"
 ExecStart=/usr/bin/python -m clapper
+Restart=on-failure
+RestartSec=30
 
 [Install]
 WantedBy=dev-serial-by\x2did-usb\x2dProlific_Technology_Inc._USB\x2dSerial_Controller\x2dif00\x2dport0.device
