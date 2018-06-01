@@ -1,12 +1,13 @@
 [tool.poetry]
 name = "Clapper"
-version = "0.1.2"
+version = "0.1.3"
 description = "xml-rpc server for ICStation board ICSE014A"
 authors = ["Grzegorz Zebrowski <grzegorz.zebrowski@thrust.pl>"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
 pyserial = "^3.4"
+disco = {git = "https://github.com/profknivre/disco.git"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
